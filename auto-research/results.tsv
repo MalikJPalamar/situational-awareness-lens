@@ -1,2 +1,3 @@
 date	report_version	cs_score	as_score	ac_score	cv_score	methodology_version	experiment	status	description
 2026-03-28	v1	24.6	0.0	42.0	40.0	v1.0	baseline	keep	Initial report - price + technicals + alerts + thesis alignment
+2026-03-29	v2	45.7	0.0	78.9	73.3	v1.1	format-001	pending	Added directional bias + timeframe + risk factor + macro overlay + sector correlation + support/resistance

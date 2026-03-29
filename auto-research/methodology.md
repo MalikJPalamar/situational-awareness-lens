@@ -1,41 +1,55 @@
-# Methodology v1.0 — Baseline
+# Methodology v1.1 — First Experiment
+
+## Changes from v1.0
+- **Added:** Directional bias per ticker (🟢 LONG / 🟡 WATCH / 🔴 AVOID / 🟢 ACCUMULATE / 🟢 CONTRARIAN / 🟡 SPECULATIVE)
+- **Added:** Timeframe per ticker (Swing 2-4wk / Position 3-6mo / Long-term 12mo+)
+- **Added:** Explicit risk factor per ticker
+- **Added:** Support/resistance levels per ticker
+- **Added:** Macro overlay section (VIX, DXY, 10Y yield, WTI, Brent, S&P 500, Nasdaq)
+- **Added:** Sector correlation table with rotation signal
+- **Added:** Enhanced Aschenbrenner thesis alignment with priority ranking
 
 ## Report Structure
 
-1. **Momentum Leaderboard** — All 18 tickers ranked by composite signal strength
-2. **Sector Breakdown** — Each of the 4 SA sectors with per-ticker analysis
-3. **Per-Ticker Analysis** includes:
-   - Price and daily change
-   - 52-week range
-   - RSI (14), MACD (12,26), SMA 20/50/200, EMA 9/20
-   - Directional signal: 🟢 Bullish / 🟡 Neutral / 🔴 Bearish
-   - Key signal summary (text)
-4. **Alerts Section** — Overbought, oversold, golden cross, death cross, deep pullbacks
-5. **Macro Context** — Aschenbrenner thesis alignment paragraph
-6. **Earnings Calendar** — Upcoming earnings dates for all tickers
+1. **Macro Overlay** — VIX, DXY, 10Y yield, WTI crude, Brent, S&P 500, Nasdaq + SA impact
+2. **Momentum Leaderboard** — All 18 tickers ranked with bias, timeframe, RSI, signal
+3. **Sector Breakdown** — Each of the 4 SA sectors with per-ticker analysis
+4. **Per-Ticker Analysis** includes:
+   - Price, 52W range, RSI, MACD, SMA 20/50/200, EMA
+   - Support/resistance levels
+   - **Directional bias** with reasoning
+   - **Timeframe** (swing / position / long-term)
+   - **Risk factor** (specific, named)
+   - Catalyst or trigger
+5. **Alerts Section** — Overbought, oversold, golden cross, pullbacks, VIX, macro
+6. **Sector Correlation Table** — Cross-sector dynamics + rotation signal
+7. **Aschenbrenner Thesis Alignment** — Priority ranking of sectors
+8. **Earnings Calendar** — embedded in per-ticker sections
+
+## Signal Classification (updated)
+
+- **🟢 LONG**: Clear bullish setup — technicals, fundamentals, and catalyst aligned
+- **🟢 ACCUMULATE**: Longer-term bullish, currently in a dip/pullback buy zone
+- **🟢 CONTRARIAN**: Deep value / oversold with thesis intact, higher risk
+- **🟡 WATCH**: No clear edge — conflicting signals or waiting for confirmation
+- **🟡 SPECULATIVE**: High-conviction thesis but pre-revenue or binary outcome
+- **🔴 AVOID**: Bearish technicals, deteriorating fundamentals, or risk/reward skewed negative
 
 ## Data Sources (Priority Order)
 
-1. Google Finance (real-time quotes, cross-referenced prices)
-2. TipRanks (technical indicators, analyst targets)
-3. Investing.com (RSI, MACD, moving averages, daily signals)
-4. TradingView (chart signals, community analysis)
+1. Google Finance (real-time quotes)
+2. TipRanks (technical indicators, analyst consensus)
+3. Investing.com (RSI, MACD, moving averages, macro data)
+4. TradingView (chart signals, technical ratings)
 5. Yahoo Finance (fundamentals, earnings, news)
-6. StockAnalysis.com (overview, news aggregation)
-7. Robinhood (intraday range, volume)
+6. Schwab Market Update (macro context, market structure)
+7. CNBC (macro, bonds, yields)
+8. StockAnalysis.com (overview, news)
+9. Robinhood (intraday range, volume)
 
-## Signal Classification
+## Limitations (v1.1)
 
-- **🟢 Bullish**: RSI < 40 with MACD buy signal, OR price above SMA50 + MACD bullish, OR strong catalyst
-- **🔴 Bearish**: RSI > 70 with MACD sell signal, OR price below SMA50 + SMA200, OR negative catalyst
-- **🟡 Neutral**: Everything else, or conflicting signals
-
-## Limitations (v1.0)
-
-- No support/resistance levels yet
-- No explicit entry/exit zones
-- No sector correlation analysis
-- No news sentiment scoring
-- No options flow
-- No macro overlays (DXY, VIX, yields, oil)
-- Accuracy scoring starts after 5 trading days of history
+- No formal news sentiment scoring (-2 to +2) yet
+- No options flow / unusual activity analysis
+- Accuracy Score still at 0.0 (needs 5 trading days of history)
+- Macro overlay is present but not yet scored per-ticker impact
